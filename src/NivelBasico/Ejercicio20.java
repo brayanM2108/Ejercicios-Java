@@ -8,40 +8,34 @@ public class Ejercicio20 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Ingresa 3 números para ordenarlos: ");
-        int a = scanner.nextInt();
-        int b = scanner.nextInt();
-        int c = scanner.nextInt();
+        System.out.print("Ingresa el primer número: ");
+        double a = scanner.nextDouble();
+        System.out.print("Ingresa el segundo número: ");
+        double b = scanner.nextDouble();
+        System.out.print("Ingresa el tercer número: ");
+        double c = scanner.nextDouble();
 
-        int menor = 0, mayor = 0, medio = 0;
-        if (a <= b && b <= c){
-            menor = a;
-            medio = b;
-            mayor = c;
-        } else if (a <= c && c <=b) {
-            mayor = b;
-            medio = c;
-            menor = a;
-        } else if (b <= a && a <= c) {
-            mayor = c;
-            medio = b;
-            menor = a;
-        } else if (c <= a && a <= b) {
-            mayor = b;
-            medio = a;
-            menor = c;
-        }else if (b <= c && c <= a) {
-            mayor = a;
-            medio = c;
-            menor = b;
-        }else if (c <= b && b <= a) {
-            mayor = a;
-            medio = b;
-            menor = c;
+
+        if (a > b) {
+            double temp = a;
+            a = b;
+            b = temp;
         }
-        System.out.println("Orden descendente:");
-        System.out.println(mayor);
-        System.out.println(medio);
-        System.out.println(menor);
+        if (a > c) {
+            double temp = a;
+            a = c;
+            c = temp;
+        }
+        if (b > c) {
+            double temp = b;
+            b = c;
+            c = temp;
+        }
+
+
+        System.out.println("Los números ordenados son: " + a + ", " + b + ", " + c);
+        scanner.close();
+
     }
 }
+

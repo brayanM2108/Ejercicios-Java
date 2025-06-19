@@ -15,6 +15,8 @@ public class Ejercicio19 {
             aux *= i;
         }
         System.out.println("El factorial de " + numero + " es: " + aux);
+
+        scanner.close();
     }
 
 }
