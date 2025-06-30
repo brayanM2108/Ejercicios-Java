@@ -12,28 +12,25 @@ package NivelIntermedio;
 import java.util.Arrays;
 import java.util.Scanner;
 
-import static java.util.Arrays.sort;
 
 public class Ejercicio1 {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Ingrese una palabra: ");
-        String palabra1 = scanner.nextLine().toLowerCase();
+        String word1 = scanner.nextLine().toLowerCase();
         System.out.print("Ingrese otra palabra: ");
-        String palabra2 = scanner.nextLine().toLowerCase();
-        System.out.println("¿Es un anagrama válido? " + funcionAnagrama(palabra1, palabra2));
-
-
+        String word2 = scanner.nextLine().toLowerCase();
+        System.out.println("¿Es un anagrama válido? " + functionAnagrama(word1, word2));
 
     }
 
-    public static boolean funcionAnagrama (String palabra1, String palabra2){
-        if (palabra1.equals(palabra2) || palabra1.length() != palabra2.length()){
+    public static boolean functionAnagrama (String word1, String word2){
+        if (word1.equals(word2) || word1.length() != word2.length()){
             return false;
         }
-        char [] char1 = palabra1.toCharArray();
-        char [] char2 = palabra2.toCharArray();
+        char [] char1 = word1.toCharArray();
+        char [] char2 = word2.toCharArray();
 
         Arrays.sort(char1);
         Arrays.sort(char2);

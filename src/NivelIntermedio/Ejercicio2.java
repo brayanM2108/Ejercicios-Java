@@ -20,7 +20,7 @@ public class Ejercicio2 {
         String[] words = text.split(" ");
 
         System.out.println("Repeticiones de palabras: \n"  + countWords(words));
-
+        scanner.close();
     }
     public static StringBuilder countWords (String[]words){
         Map<String, Integer> counter = new HashMap<>();
